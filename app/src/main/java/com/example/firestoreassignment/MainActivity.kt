@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         firestore.collection("Users")
             .addSnapshotListener { querySnapshot, firebaseFirestoreException ->
                 querySnapshot?.forEach {
-                    textViewData.append(it.get("name").toString() + "|" +it.get("number").toString() + "|" + it.get("address").toString() + "\n")
+                    textViewData.append(it.get("name").toString() + " " +it.get("number").toString() + " " + it.get("address").toString() + "\n")
 
                 }
             }
